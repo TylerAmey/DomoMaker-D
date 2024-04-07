@@ -1,4 +1,5 @@
 const models = require('../models');
+const { db } = require('../models/Domo');
 
 const { Account } = models;
 
@@ -57,9 +58,15 @@ const signup = async (req, res) => {
   }
 };
 
+const deleteAccount = async (req, res) => {
+  db.accounts.deleteOne( {username: req.session.account.username});
+  res.redirect('/login');
+}
+
 module.exports = {
   loginPage,
   login,
   logout,
   signup,
+  deleteAccount,
 };
