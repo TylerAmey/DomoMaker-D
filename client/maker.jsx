@@ -83,7 +83,7 @@ const App = () => {
     return (
         <div>
             <div id="makeDomo">
-                <DomoForm triggersReload={() => setReloadDomos(!reloadDomos)} />
+                <DomoForm triggerReload={() => setReloadDomos(!reloadDomos)} />
             </div>
             <div id="domos">
                 <DomoList domos={[]} reloadDomos={reloadDomos} />

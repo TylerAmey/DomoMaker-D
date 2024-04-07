@@ -55,8 +55,8 @@ const LoginWindow = (props) => {
             <input id="pass" type="password" name="pass" placeholder="password" />
             <input className="formSubmit" type="submit" value="Sign in" />
         </form>
-    )
-}
+    );
+};
 
 const SignupWindow = (props) => {
     return (
@@ -75,8 +75,8 @@ const SignupWindow = (props) => {
             <input id="pass2" type="password" name="pass2" placeholder="retype password" />
             <input className="formSubmit" type="submit" value="Sign up" />
         </form>
-    )
-}
+    );
+};
 
 const init = () => {
     const loginButton = document.getElementById('loginButton');
@@ -89,6 +89,8 @@ const init = () => {
         root.render( <LoginWindow /> );
         return false;
     });
+
+    console.log(signupButton);
 
     signupButton.addEventListener('click', (e) => {
         e.preventDefault();
